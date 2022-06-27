@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className={utilStyles.headingXl}>KUBO</h1>
         <p>Hello, I'm a Web Developer based in Japan.</p>
       </main>
-      <footer>
+      <footer className="footer">
         <p>©︎2022 KUBO</p>
       </footer>
     </Layout>
