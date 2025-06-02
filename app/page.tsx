@@ -11,6 +11,7 @@ import {
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
+import Image from 'next/image'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
@@ -153,8 +154,17 @@ export default function Personal() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+              {/* <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 <ProjectVideo src={project.video} />
+              </div> */}
+              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                <Image 
+                  src={project.image} 
+                  alt={project.name} 
+                  width={600} 
+                  height={400} 
+                  className="aspect-video w-full rounded-xl object-cover"
+                />
               </div>
               <div className="px-1">
                 <a
@@ -171,6 +181,23 @@ export default function Personal() {
               </div>
             </div>
           ))}
+          <div className='space-y-2'>
+            <div className='rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50'>
+              <Image 
+                src="/coming_soon.jpg"
+                alt="？？？？"
+                width={600} 
+                height={400} 
+                className="aspect-video w-full rounded-xl object-cover"
+              />
+            </div>
+            <div>
+              <span className='font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50'>？？？？</span>
+              <p className="text-base text-zinc-600 dark:text-zinc-400">
+                新しいプロダクトを開発中です。お楽しみに！
+              </p>
+            </div>
+          </div>
         </div>
       </motion.section>
 
