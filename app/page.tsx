@@ -157,7 +157,7 @@ export default function Personal() {
               {/* <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 <ProjectVideo src={project.video} />
               </div> */}
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+              <a href="https://hotlist.social/" target='_blank' className="block relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 <Image 
                   src={project.image} 
                   alt={project.name} 
@@ -165,7 +165,7 @@ export default function Personal() {
                   height={400} 
                   className="aspect-video w-full rounded-xl object-cover"
                 />
-              </div>
+              </a>
               <div className="px-1">
                 <a
                   className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
