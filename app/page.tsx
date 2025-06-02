@@ -16,8 +16,9 @@ import {
   PROJECTS,
   WORK_EXPERIENCE,
   BLOG_POSTS,
-  EMAIL,
+  FORM_URL,
   SOCIAL_LINKS,
+  SERVICES,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -137,8 +138,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Webサービスを開発・運営しながら、企業やプロジェクトに対して技術顧問としての支援も行っています。
           </p>
         </div>
       </motion.section>
@@ -147,7 +147,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <h3 className="mb-5 text-lg font-medium">Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
@@ -173,6 +173,41 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Services</h3>
+        <div className="flex flex-col space-y-2">
+          {SERVICES.map((service) => (
+            <a
+              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+              href={service.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={service.id}
+            >
+              <Spotlight
+                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                size={64}
+              />
+              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                <div className="relative flex w-full flex-row justify-between">
+                  <div>
+                    <h4 className="font-normal dark:text-zinc-100">
+                      {service.name}
+                    </h4>
+                    <p className="text-zinc-500 dark:text-zinc-400">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -208,9 +243,9 @@ export default function Personal() {
             </a>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
-      <motion.section
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -244,17 +279,17 @@ export default function Personal() {
             ))}
           </AnimatedBackground>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
+        <h3 className="mb-5 text-lg font-medium">Contact</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
-            {EMAIL}
+          ご質問やご相談はお気軽にどうぞ。
+          <a className="underline dark:text-zinc-300" href={FORM_URL} target="_blank">
+            お問い合わせフォームへ
           </a>
         </p>
         <div className="flex items-center justify-start space-x-3">
