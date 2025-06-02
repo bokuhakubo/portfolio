@@ -182,7 +182,7 @@ export default function Personal() {
         <div className="flex flex-col space-y-2">
           {SERVICES.map((service) => (
             <a
-              className="group relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] transition-all duration-200 hover:bg-zinc-400/40 dark:bg-zinc-600/30 dark:hover:bg-zinc-500/40 cursor-pointer"
+              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
               href={service.link}
               target="_blank"
               rel="noopener noreferrer"
