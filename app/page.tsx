@@ -168,14 +168,14 @@ export default function Personal() {
               </a>
               <div className="px-1">
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="font-medium group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50 my-1"
                   href={project.link}
                   target="_blank"
                 >
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
               </div>
@@ -192,8 +192,8 @@ export default function Personal() {
               />
             </div>
             <div>
-              <span className='font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50'>？？？？</span>
-              <p className="text-base text-zinc-600 dark:text-zinc-400">
+              <span className='font-medium group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50 my-1'>？？？？</span>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">
                 新しいプロダクトを開発中です。お楽しみに！
               </p>
             </div>
@@ -242,7 +242,7 @@ export default function Personal() {
                         ></path>
                       </svg>
                     </div>
-                    <p className="text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors duration-200">
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors duration-200 mt-2">
                       {service.description}
                     </p>
                   </div>
