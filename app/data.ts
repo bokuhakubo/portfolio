@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
 
 export const SERVICES: Service[] = [
   {
-    name: '技術顧問',
+    name: 'TechBridge Solutions（技術顧問）',
     description: 'Web制作に関する技術的な課題や不安を解消し、プロジェクト成功を支援します',
     link: 'https://web-partner-lp.vercel.app/',
     id: 'service1',
