@@ -123,7 +123,7 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'X',
-    link: 'https://twitter.com/kubogen_',
+    link: 'https://twitter.com/naotobota',
   },
   {
     label: 'Github',
